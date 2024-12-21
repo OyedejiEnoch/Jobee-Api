@@ -1,0 +1,27 @@
+{
+  "name": "jobee",
+  "version": "1.0.0",
+  "description": "A job Api",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "prod": "SET NODE_ENV=production & nodemon app.js"
+  },
+  "author": "Enoch Oyedeji",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.8.4",
+    "node-geocoder": "^4.4.1",
+    "nodemon": "^3.1.7",
+    "slugify": "^1.6.6",
+    "validator": "^13.12.0"
+  }
+}
