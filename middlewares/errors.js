@@ -40,6 +40,23 @@ export default (err, req, res, next)=>{
         });
       }
 
+      if (err.name === "JsonwebTokenError") {
+        const message = "Json web token is invalid. Try again";
+        return res.status(400).json({
+          success: false,
+          message: message,
+        });
+      }
+
+      if (err.name === "TokenExpiredError") {
+        const message = "Json web token is expired. Try again";
+        return res.status(400).json({
+          success: false,
+          message: message,
+        });
+      }
+    
+
     if (process.env.NODE_ENV === 'production') {
         // Do not expose sensitive details in production
         return res.status(errStatus).json({
